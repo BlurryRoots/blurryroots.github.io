@@ -1,90 +1,48 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset='utf-8'>
-		<meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
 
-		<link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-		<link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-		<link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
 
-		<script type="text/javascript" src="/javascript/lib/mustache.js"></script>
-		<script type="text/javascript" src="/javascript/lib/jquery.min.js"></script>
+    <title>get-blurry by BlurryRoots</title>
+  </head>
 
-		<script id="tpl-block" type="text/html">
-			<p>{{text}}</p>
-		</script>
+  <body>
 
-		<script id="tpl-block" type="text/html">
-			<pre>
-			<code>
-			{{text}}
-			</code>
-			</pre>
-		</script>
+    <header>
+      <div class="container">
+        <h1>get-blurry</h1>
+        <h2>echo $random_stuff</h2>
 
-		<script id="tpl-link-mention" type="text/html">
-			<a href="https://github.com/{{username}}" class="user-mention">{{username}}</a>
-		</script>
+        <section id="downloads">
+          <a href="https://github.com/BlurryRoots" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
 
-		<script id="tpl-link" type="text/html">
-			<a href="{{link}}">{{text}}</a>
-		</script>
+    <div class="container">
+      <section id="main_content">
+        <h2>
+<a name="working-remotely-with-sublime-text" class="anchor" href="#working-remotely-with-sublime-text"><span class="octicon octicon-link"></span></a>Working remotely with sublime text.</h2>
 
-		<script id="tpl-post" type="text/html">
-			<h3>
-				<a name="{{slug}}" class="anchor" href="#{{slug}}">
-					<span class="octicon octicon-link"></span>
-				</a>
-				{{title}}
-			</h3>
+<p>There are two basic scenarios.</p>
 
-			{{content}}
-		</script>
+<p><strong>Edit random files</strong></p>
 
-		<script type="text/javascript">
+<p>To do that, i'd recommend using rsub. There is a <a href="http://log.liminastudio.com/writing/tutorials/sublime-tunnel-of-love-how-to-edit-remote-files-with-sublime-text-via-an-ssh-tunnel">great tutorial by tedbot</a> explaining how to do that.</p>
 
-		</script>
+<p><strong>Working on a remote project</strong></p>
 
-		<title>get-blurry by BlurryRoots</title>
-	</head>
+<p>In this case you want to work on a particular part of your file system. In order to archive this, you want to mount the remote directory over ssh. <a href="http://xmodulo.com/2013/04/how-to-mount-remote-directory-over-ssh-on-linux.html">Here</a> you'll find a comprehensive tutorial how to set up sshfs, which enables you to simply do something like:</p>
 
-	<body>
+<p><code>$ sshfs username@yourhostname.com:/path/to/remote/directory /path/to/local/</code></p>
+      </section>
+    </div>
 
-		<header>
-			<div class="container">
-				<h1>get-blurry</h1>
-				<h2>echo $random_stuff</h2>
-
-				<section id="downloads">
-					<a href="https://github.com/BlurryRoots" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
-				</section>
-			</div>
-		</header>
-
-		<div class="container">
-			<section id="main_content">
-				<h3>
-					<a class="anchor" href="#working-remotely-with-sublime-text">
-						<span class="octicon octicon-link"></span>
-					</a>
-					Working remotely with sublime text.
-				</h3>
-
-				<p>There are two basic scenarios.</p>
-
-				<h3>Edit random files.</h3>>
-
-				<p>To do that, i'd recommend using rsub. There is a great <a href="http://log.liminastudio.com/writing/tutorials/sublime-tunnel-of-love-how-to-edit-remote-files-with-sublime-text-via-an-ssh-tunnel">tutorial by tedbot</a> explaining how to do that.</p>
-
-				<h3>Working on a remote project</h3>
-
-				<p>In this case you want to work on a particular part of your file system. In order to archive this, you want to mount the remote directory over ssh. <a href="http://xmodulo.com/2013/04/how-to-mount-remote-directory-over-ssh-on-linux.html">Here</a> you'll find a comprehensive tutorial how to set up sshfs, which enables you to simply do something like:</p>
-
-				<pre><code>$ sshfs username@yourhostname.com:/path/to/remote/directory /path/to/local/mountpoint</code></pre>
-			</section>
-		</div>
-
-		
-	</body>
+    
+  </body>
 </html>
